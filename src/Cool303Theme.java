@@ -1,4 +1,9 @@
+import java.awt.*;
+import javax.swing.*;
 
-public abstract class Cool303Theme {
-
+public interface Cool303Theme {
+	
+	public void shapeButton(Cool303Button button);
+	public void shapeWindow(Cool303Container window);
+	public void shapeWindow(Cool303Container window, String s);
 }
