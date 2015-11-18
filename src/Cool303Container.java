@@ -2,20 +2,26 @@ import javax.swing.JFrame;
 
 public class Cool303Container extends JFrame{
 	
-	public static Cool303Theme theme;
+	private Cool303Theme theme;
 	
-	public Cool303Container() {
+	public Cool303Container(Cool303Theme theme) {
 		super();
-		theme.shapeWindow(this);
+		this.theme = theme;
+		this.theme.shapeWindow(this);
+		setVisible(true);
 	}
 	
-	public Cool303Container(String s) {
+	public Cool303Container(Cool303Theme theme, String s) {
 		super();
-		theme.shapeWindow(this, s);
+		this.theme = theme;
+		this.theme.shapeWindow(this, s);
+		for (int i = 0; i < 20 ; i++) {
+			this.add(new Cool303Button(theme));
+		}
+		setVisible(true);
 	}
-
+	
 	public Cool303Container(Cool303Theme theme, int size, String str) {
-		
 	}
 	
 	private void calculateMinSize() {

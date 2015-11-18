@@ -3,9 +3,9 @@ import javax.swing.*;
 
 public class Cool303Button extends JButton{
 	
-	public Cool303Button() {
+	public Cool303Button(Cool303Theme theme) {
 		super();
-		Cool303Container.theme.shapeButton(this);
+		theme.shapeButton(this);
 		
 	}
 }
