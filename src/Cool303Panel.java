@@ -1,24 +1,19 @@
-import java.awt.Graphics;
-import java.awt.GridLayout;
+import java.awt.Color;
+import java.awt.GridBagLayout;
 
 import javax.swing.JPanel;
 
-public class Cool303Panel extends JPanel{
-	
+public class Cool303Panel extends JPanel {
+
 	String s = "";
-	
+
 	public Cool303Panel(Cool303Theme theme) {
-		super();
-		this.setSize(300, 400);
+		super(new GridBagLayout());
 	}
-	
+
 	public Cool303Panel(Cool303Theme theme, String s) {
-		super();
+		super(new GridBagLayout());
+		this.setBackground(Color.cyan);
 		this.s = s;
 	}
-	
-	protected void paintComponent(Graphics g) {
-        super.paintComponent(g);
-        g.drawString(s, 0, 0);
-    }
 }

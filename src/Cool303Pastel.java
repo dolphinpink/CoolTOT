@@ -62,30 +62,25 @@ public class Cool303Pastel implements Cool303Theme {
 		// window.getContentPane().add(new MyCanvas());
 	}
 
-	// string has not yet been added
+	// string and border have not yet been added
 	public void shapePanel(Cool303Theme theme, Cool303Container window, String s) {
-
-		window.setLayout(new GridBagLayout());
+		
 		GridBagConstraints c = new GridBagConstraints();
-		c.fill = GridBagConstraints.HORIZONTAL;
-		c.weightx = 0.5;
 
 		// configuring panel for buttons
 		Cool303Panel ogpanel = new Cool303Panel(theme, "dododdododod");
-		ogpanel.setPreferredSize(new Dimension(500, 300));
-		ogpanel.setMaximumSize(new Dimension(500, 300)); // hardCoded sizing
-		ogpanel.setMinimumSize(new Dimension(500, 300));
+		ogpanel.setMaximumSize(new Dimension(300, 200)); // hardCoded sizing
 		window.add(ogpanel);
-
+		
 		// configuring buttons
 		for (int y = 0; y < 4; y++) {
 			for (int x = 0; x < 5; x++) {
+				c.weightx = 0;
+				c.weighty = 0;
 				c.gridy = y;
 				c.gridx = x;
-				ogpanel.add(new Cool303Button(theme), c);
-				System.out.println("x is " + String.valueOf(x) + " and y is " + String.valueOf(y));
+				ogpanel.add(new Cool303Button(theme, x+y*5), c);
 			}
-			c.gridwidth = GridBagConstraints.REMAINDER; //end row
 		}
 		
 		System.out.println("aoinsth");
