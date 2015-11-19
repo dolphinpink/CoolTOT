@@ -21,5 +21,9 @@ public class Cool303Halloween implements Cool303Theme {
 	public void shapeWindow(Cool303Container window, String s) {
 		
 	}
+	
+	public void shapePanel(Cool303Theme theme, Cool303Container window, String s) {
+		
+	}
 
 }
